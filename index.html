@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Piyush Mejari</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm Piyush, I am innovative full stack java developer based in India with personal interest in web development.Proficient in HTML & CSS; plus have knowledge about Java programming language.
+              I'm passionate about various software technologies.
+            </p>
+            <p>
+              Creative web developer dedicated to developing and optimizing interactive, user-friendly, and feature-rich websites. Leverage analytical skills and strong attention to detail in order to deliver original and efficient web solutions, provide technical knowledge and expertise, build new websites from start to finish.
+            </p>
+            <p>
+              My keen interest in programming and design helps me find creative solutions to technical challenges and help me to develop visually appealing websites.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="./Square balcony.jpg"
+            alt="A photo of Ada Lovelace"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>The Portfolio Project</h3>
+          </summary>
+          <img
+            src="./ddfed094410453.Y3JvcCwyODc3LDIyNTEsNjQsMA.png"
+            alt="Portfolio-project"
+            class="project-image"
+          />
+          <p class="project-description">
+            This is the personal porfolio project I have created.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Login Page</h3>
+          </summary>
+          <img
+            src="./user-login-page-on-background-vector-5030827.jpg"
+            alt="A login page with interactivity"
+            class="project-image"
+          />
+          <p class="project-description">
+          I have created this one login page so that user can login into account using his/her credentials.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>weather Application</h3>
+          </summary>
+          <img
+            src="./Weather_App.png"
+            alt="weather-app window"
+            class="project-image"
+          />
+          <p class="project-description">
+           By using this anyone can get actual weather report of any region which he/she provided.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+           <i class="fa-brands fa-html5"></i>
+           <i class="fa-brands fa-css3-alt"></i>
+           <i class="fa-brands fa-square-js"></i>
+           <i class="fa-brands fa-java"></i>
+           <i class="fa-brands fa-github"></i>
+           <i class="fa-brands fa-bootstrap"></i>
+           <i class="fa-brands fa-react"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with <span class="heart">♥</span> in Mumbai</footer>
+
+    <script>
+      const timeContainer = document.getElementById("time-container");
+      const BIRTH_DAY = "12-10-1815";
+      const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+      const intlNumberFormatter = new Intl.NumberFormat("en-US");
+  
+      setInterval(() => {
+        const now = new Date();
+        const difference = Math.floor(
+          (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+        );
+  
+        timeContainer.innerText = intlNumberFormatter.format(difference);
+      }, 1000);
+    </script>
+  </body>
+</html>
